@@ -1,0 +1,46 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (3.2.17)
+      activesupport (= 3.2.17)
+      builder (~> 3.0.0)
+    activerecord (3.2.17)
+      activemodel (= 3.2.17)
+      activesupport (= 3.2.17)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activesupport (3.2.17)
+      i18n (~> 0.6, >= 0.6.4)
+      multi_json (~> 1.0)
+    activewarehouse-etl (1.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      adapter_extensions (>= 0.9.5.rc1)
+      fastercsv (>= 1.2.0)
+      rake (>= 0.8.3)
+    adapter_extensions (1.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      rake (>= 0.8.3)
+    arel (3.0.3)
+    bson (1.10.0)
+    bson_ext (1.10.0)
+      bson (~> 1.10.0)
+    builder (3.0.4)
+    fastercsv (1.5.5)
+    i18n (0.6.9)
+    multi_json (1.9.2)
+    mysql2 (0.3.15)
+    pg (0.17.1)
+    rake (10.3.1)
+    tzinfo (0.3.39)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (< 4.0)
+  activewarehouse-etl
+  bson_ext
+  mysql2
+  pg

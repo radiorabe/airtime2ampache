@@ -1,0 +1,19 @@
+common: &common
+  adapter: mysql2
+  username: etl
+  password: etl
+
+etl_execution:
+  <<: *common
+  database: airtime2ampache
+
+airtime:
+  adapter: postgresql
+  username: airtime
+  password: airtime
+  database: airtime
+
+ampache:
+  <<: *common
+  database: ampache
+
