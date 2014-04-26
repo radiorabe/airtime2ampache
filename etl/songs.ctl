@@ -40,10 +40,10 @@ rename :length,       :time
 rename :track_number, :track
 
 transform :album, :foreign_key_lookup,
-          resolver => ActiveRecordResolver.new(
+          resolver: ActiveRecordResolver.new(
             Album, :find_id_by_name
           ),
-          default  => 0
+          default: 0
 
 transform :artist, :foreign_key_lookup,
           resolver: ActiveRecordResolver.new(
