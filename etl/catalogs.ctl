@@ -3,6 +3,9 @@
 $:.unshift File.dirname(__FILE__)
 require 'common'
 
+# models vor validation
+require 'catalog'
+
 pre_process do
   # work around https://github.com/activewarehouse/activewarehouse-etl/issues/32
   ActiveRecord::Base.establish_connection :airtime
@@ -27,4 +30,8 @@ destination :out, {
 },
 {
   :order => [:id, :name, :path, :catalog_type, :enabled]
+}
+
+after_post_process_screen(:fatal) {
+  assert_equal 1, Catalog.count()
 }
