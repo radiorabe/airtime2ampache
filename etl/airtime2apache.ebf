@@ -1,4 +1,4 @@
-run "catalogs.ctl"
-run "artists.ctl"
-run "albums.ctl"
-run "songs.ctl"
+run 'catalogs.ctl'
+run 'artists.ctl'
+run 'albums.ctl'
+run 'songs.ctl'
