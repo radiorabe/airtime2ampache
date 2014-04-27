@@ -58,6 +58,15 @@ transform(:time) do |_key, value, _row|
   (hours * 60 * 60) + (minutes * 60) + seconds
 end
 
+[
+  :title,
+  :file
+].each do |field|
+  transform(field) do |_key, value, _row|
+    value.to_s.force_encoding 'UTF-8'
+  end
+end
+
 destination :out,
             {
               type:     :database,
