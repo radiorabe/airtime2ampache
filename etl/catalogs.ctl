@@ -17,7 +17,7 @@ source :default,
          id:           1,
          name:         'airtime',
          path:         '/var/nfs/airtime',
-         catalog_type: 'remote',
+         catalog_type: 'local',
          enabled:      true
        ]
 

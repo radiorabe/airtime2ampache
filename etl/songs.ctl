@@ -58,6 +58,8 @@ transform(:time) do |_key, value, _row|
   (hours * 60 * 60) + (minutes * 60) + seconds
 end
 
+transform :track, :default, default_value: 0
+
 [
   :title,
   :file

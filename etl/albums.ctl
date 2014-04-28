@@ -17,6 +17,10 @@ rename :disc_number, :disk
 
 transform :year, :type, type: :number
 
+transform :name,   :default, default_value: ''
+transform :disk,   :default, default_value: 0
+transform :prefix, :default, default_value: ''
+
 before_write :surrogate_key
 
 destination :out,
@@ -26,4 +30,4 @@ destination :out,
               truncate: true,
               table:    'album'
             },
-            order: [:id, :name, :year, :disk]
+            order: [:id, :name, :year, :disk, :prefix]
